@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <style>
+            /* FOUC fix (flash of unstyled content) KILDE: https://dev.to/markmercier/combatting-flashes-of-unstyled-content-k31 */
+            html {
+                animation: fouc-fix 5s steps(1);
+            }
+            @keyframes fouc-fix {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" /> <!-- favicon -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://kit.fontawesome.com/4d151777d8.js" crossorigin="anonymous"></script> <!-- font awesome -->
+        <script src="assets/js/script.js" defer></script>
+    </head>
+    <body>
+        <header></header>
+        <main></main>
+        <footer></footer>
+    </body>
+</html>

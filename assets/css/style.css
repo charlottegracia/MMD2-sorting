@@ -1,0 +1,1021 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+html {
+    background-image: url("../images/Baggrund.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--grey);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    font-family: 'Josefin Sans', sans-serif;
+    hyphens: auto;
+}
+
+:root {
+	--black: rgba(25, 28, 39, 100);
+	--green: #7daf71;
+	--darkgreen: #667b68;
+	--blue: #80a2a6;
+    --darkblue: #346d7e;
+	--white: #f2f2f2;
+    --grey: #707070;
+}
+
+@media screen and (max-width: 812px) {
+    html {
+        background-image: none;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    header nav a img {
+        width: 13vw;
+        padding: 0 1vw;
+    }
+}
+
+/* HEADER NAVIGATION */
+
+header {
+    padding: 0;
+    background-color: var(--green);
+}
+
+header nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav a img {
+	width: 3.5vw;
+    padding: 0 1vw;
+} 
+
+header nav a h1 {
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    color: var(--white);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+    font-size: 20px;
+}
+
+nav ul li {
+    padding: 0 2vw;
+}
+
+nav ul li a {
+	text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    border-bottom: solid 2px var(--green);
+}
+
+nav li a:hover {border-bottom: solid 2px var(--white);}
+
+.dropdownMobile {
+    background-color: var(--white);
+    margin: 0;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.dropdownMobile li {
+    font-size: 25px;
+    padding: 10px;
+    text-align: right;
+}
+
+.dropdownMobile li a {
+    text-decoration: none;
+    color: var(--darkgreen);
+}
+
+#navIkon {
+    color: var(--white);
+    padding: 0 20px;
+    display: none;
+}
+
+#navMobile {
+    display: none;
+}
+
+@media screen and (max-width: 812px) {
+    nav ul {
+        display: none;
+    }
+
+    header nav a img {
+        width: 10vw;
+        padding: 0 1vw;
+    }
+
+    #navMobile {
+        display: none;
+    }
+
+    #navIkon {
+        font-size: 25px;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    nav ul {
+        display: none;
+    }
+
+    header nav a img {
+        width: 6vw;
+        padding: 0 1vw;
+    }
+
+    #navMobile {
+        display: none;
+    }
+
+    #navIkon {
+        font-size: 27px;
+        display: block;
+    }
+}
+
+/* STYLE FOR ALLE SIDER */
+main {
+    margin: 0 15%;
+    padding: 0;
+}
+
+main h1 {
+    color: var(--darkgreen);
+    text-align: center;
+    font-size: 50px;
+    padding: 25px;
+    margin: 0;
+}
+
+main h2 {
+    color: var(--blue);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 812px) {
+    main {
+        margin: 0 20px;
+        padding: 0;
+    }
+
+    main h1 {
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    .social {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    html {
+        background-size: contain;
+        background-attachment: fixed;
+    }
+
+    .social {
+        display: none;
+    }
+} 
+
+.mail {
+    text-decoration: none;
+    color: var(--green);
+}
+
+/* FRONTPAGE */
+.frontpageGrid {
+    margin-bottom: 50px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 15vw);
+    grid-template-rows: repeat(2, 15vw);
+    grid-gap: 1vw;
+}
+
+main section a {
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main section a h2 {
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 30%;
+    margin: 0;
+}
+
+main section a h3 {
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+main section a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 812px) {
+    .frontpageGrid {
+        margin-bottom: 20px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 22.5vh);
+        grid-gap: 1vw;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    .frontpageGrid {
+        margin-bottom: 20px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4, 17vw);
+        grid-template-rows: repeat(2, 17vw);
+        grid-gap: 1vw;
+    }
+}
+
+/* SAMARBEJDE OG SPONSORER */
+
+.samarbejdsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.samarbejdeImg {
+    border-radius: 5px;
+}
+
+.samarbejdsgrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.samarbejdsgrid a {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 812px) {
+    .samarbejdsgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* ADOPTER */
+
+.katteOverblikGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.katteOverblikGrid a {
+    background-color: transparent;
+    text-align: center;
+    color: var(--white);
+}
+  
+.katteOverblikGrid section {
+    display: block;
+    margin: -55px 0 0 0;
+    padding: 5px 0;
+    background-color: var(--blue);
+    float: left;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.katteOverblikGrid p {
+    padding: 0;
+    margin: 0;
+}
+  
+.katteOverblikGrid img {
+    float: left;
+}
+
+.adoptionAfKatte {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+article {
+    padding: 10px 25px;
+}
+
+article p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+article ol {
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+article ol li {
+    padding-bottom: 20px;
+}
+
+article img {
+    width: 49%;
+    height: 49%;
+    object-fit: cover;
+    display: inline;
+}
+
+.venteliste {
+    border-radius: 5px;
+}
+
+.kravDel2 {
+    padding-top: 70px;
+}
+
+.adopterLinks {
+    color: var(--green);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 812px) {
+    .katteOverblikGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 40px 5px;
+    }
+
+    .adoptionAfKatte {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .adoptionAfKatte article {
+        margin: 0;
+        padding: 0;
+    }
+
+    .venteliste h2, .venteliste h3, .venteliste p {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .adoptionAfKatte img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    .katteOverblikGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .adoptionAfKatte {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .katteOverblikGrid {
+        grid-gap: 50px 10px;
+    }
+
+    .adoptionAfKatte img {
+        display: none;
+    }
+    
+    .kravDel2 {
+        padding-top: 0;
+    }
+} 
+
+/* STØT OS */
+
+.stoet-osOverskrift{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.stoet-osUnderoverskrift {
+    text-align: center;
+    padding-top: 0;
+    margin-top: 0;
+    color: var(--darkgreen);
+    font-size: 25px;
+}
+
+.stoet-osGrid {
+    display: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.stoet-osGrid ol {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.stoet-osGrid h4, .stoet-osGrid h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.stoet-osGrid li {
+    padding: 0;
+}
+
+.stoet-osGrid img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.mailText {
+    width: 95%;
+    margin-top: 10px;
+}
+
+form {
+    padding-top: 20px;
+}
+  
+input[type=text], input[type=number], textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+  
+button {
+    background-color: var(--green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.137);
+}
+
+@media screen and (max-width: 700px) {
+    .stoet-osGrid {
+        display: unset;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        background-color: var(--white);
+        border-radius: 5px;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .extrawhite {
+        background-color: white;
+    }
+
+    .extrawhite article {
+        padding: 0;
+    }
+
+    .stoet-osGrid img {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
+    
+}
+
+/* SIDE FOR SPECIFIK KAT */ 
+
+.katGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    margin: 0;
+}
+
+.katInfo {
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.katInfo h2 {
+    color: var(--green);
+    padding: 0px;
+    margin-top: 20px;
+}
+
+.katInfo ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.katBeskrivelse h3 {
+    color: var(--blue);
+}
+
+.katPlejefamilie h4 {
+    color: var(--blue);
+}
+
+.mySlides { /* Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+    display: none;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.firstPic {
+    display: block;
+}
+
+.slideshowGrid { 
+    display: grid;
+    grid-template-columns: 1vw 1fr 1vw;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.ikon {
+    color: var(--grey);
+    margin: auto;
+    font-size: 30px;
+}
+
+.flereKatte {
+    background-color: var(--white);
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.flereKatte h2 {
+    margin: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .katGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .katGrid section {
+        margin-bottom: 10px;
+    }
+
+    .katBeskrivelse {
+        padding: 10px;
+    }
+
+    .katPlejefamilie {
+        padding: 10px;
+    }
+}
+
+/* FORENINGEN */
+.foreningenGrid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.foreningenGrid article {
+    padding: 20px 20px 0 20px;
+    border-radius: 5px;
+}
+
+.foreningenGrid h2 {
+    margin: 0;
+}
+
+.foreningenGrid h3 {
+    margin: 0;
+}
+
+.foreningenGrid ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.foreningenGrid li {
+    padding: 0px;
+}
+
+.foreningenGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.dropdown {
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdownContentForeningen {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
+    .foreningenGrid {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .foreningenGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .dropdown {
+        color: white;
+        padding: 5px 10px;
+        margin: 0;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        width: 95%;
+    }
+
+    .dropdownContentForeningen {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        border-radius: 5px;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+}
+
+
+/* KONTAKT SIDE */
+.kontaktOsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 60px;
+    border-radius: 5px;
+}
+
+.gdprOverskrift {
+    margin: 0;
+}
+
+.kontaktOsGrid ol {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 20px;
+}
+
+.kontaktOsGrid ol li h4 {
+    margin: 10px 0;
+}
+
+.kontaktOsGrid ol li p {
+    margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 812px) {
+    .kontaktOsGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        column-gap: 60px;
+    }
+
+    .kontaktOsGrid form h3 {
+        padding: 0 25px;
+        margin-bottom: 1px;
+    }
+
+    .kontaktOsGrid form input[type=text], .kontaktOsGrid form textarea {
+        width: 80%;
+        margin: 10px 25px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .gdprOverskrift {
+        padding: 20px 0;
+    }
+
+    .kontaktOsGrid form button {
+        margin: 15px 25px;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    .gdprOverskrift {
+        padding: 20px;
+    }
+}
+
+
+/* KAT I NØD */
+.katINoedGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+}
+
+.katINoedGrid p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.katINoedGrid h2 {
+    margin: 0;
+}
+
+.dropdownKatINoed {
+    margin: 10px 0;
+}
+
+.dropdownKatINoed h3{
+    margin: 10px 0 0 0;
+    font-size: 20px;
+}
+
+.dropdownKatINoed address {
+    padding-bottom: 10px;
+}
+
+.dropdownKatINoed address p {
+    padding: 0px;
+    margin: 5px 0;
+}
+
+.dropdownContentKatINoed {
+    border-radius: 5px;
+    width: 95%;
+    padding: 10px 20px;
+}
+
+.oremaerke {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.skipperOgJarlGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    margin: 0;
+}
+
+.billedTekst {
+    font-size: 15px;
+    margin: 0;
+}
+
+@media screen and (max-width: 812px) {
+    .katINoedGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .skipperOgJarlGrid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .dropdownContentKatINoed {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    .katINoedGrid {
+        grid-template-columns: 45% 45%;
+    }
+
+    .skipperOgJarlGrid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .dropdownContentKatINoed {
+        width: 90%;
+    }
+} 
+
+/* FOOTER */
+footer {
+    background-color: var(--darkgreen);
+    color: var(--white);
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.green          {background-color: var(--green);}
+.darkgreen      {background-color: var(--darkgreen);}
+.blue           {background-color: var(--blue);}
+.darkblue       {background-color: var(--darkblue);}
+.white          {background-color: var(--white);}
+.extrawhite     {background-color: white;}
+.greenText      {color: var(--green);}
+.darkgreenText  {color: var(--darkgreen);}
+.blueText       {color: var(--blue);}
+.darkblueText   {color: var(--darkblue);}
+.whiteText      {color: var(--white);}
+.greyText       {color: var(--grey);}
+
+.hoverGreen:hover     {background-color: #71A166;}
+.hoverDarkgreen:hover {background-color: #576B59;}
+.hoverBlue:hover      {background-color: #70969A;}
+.hoverDarkblue:hover  {background-color: #306474;}
+
+.boldText {
+    font-weight: bold;
+}
+.cursive {
+    font-style: italic;
+}
+
+#backToTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.social:hover {
+    border-radius: 50%;
+    border: 2px solid var(--darkblue);
+}
+
+.whiteBorderHover:hover {
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.social1 {
+    position: fixed;
+    bottom: 165px;
+    left: 30px;
+    z-index: 99;
+}
+
+.social2 {
+    position: fixed;
+    bottom: 120px;
+    left: 30px;
+    z-index: 99;
+}
+
+.social3 {
+    position: fixed;
+    bottom: 75px;
+    left: 30px;
+    z-index: 99;
+}
+
+.social4 {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 99;
+}
+
+.flexAdopter {
+    display: flex;
+    margin: 0;
+}
+
+.flexAdopter section {
+    padding-right: 25px;
+}
+
+.flexAdopter h4 {
+    margin: 0;
+}
+
+select {
+	padding: 10px;
+	width: 16vw;
+}
+
+/* FOUC (flash of unstyled content) KILDE: https://dev.to/markmercier/combatting-flashes-of-unstyled-content-k31 */
+html {
+    animation: none !important;
+}
